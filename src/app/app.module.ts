@@ -8,6 +8,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SellerSignupComponent } from './components/seller-signup/seller-signup.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { LoginComponent } from './login/login.component';
     SignUpComponent,
     SellerSignupComponent,
     LoginComponent,
+    SellerHomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
