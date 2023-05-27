@@ -1,17 +1,32 @@
-<div>
+<div *ngIf="!isSellerNavBar">
     <nav class="nav">
-        <h1>Shop Here !</h1>
+        <h1><a routerLink="">Shop Here !</a></h1>
         <div class="search-nav">
             <input type="text" placeholder="Search products">
             <button>Search</button>
         </div>
         <ul>
-            <li><a>Home</a></li>
-            <li><a routerLink="seller-signup">Seller</a></li>
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="seller/seller-signup">Seller</a></li>
             <li><a>Login</a></li>
             <li><a>Cart({{0}})</a></li>
-            
-            
+        </ul>
+    </nav>
+
+</div>
+<div *ngIf="isSellerNavBar">
+    <nav class="nav">
+        <h1><a routerLink="">Shop Here !</a></h1>
+        <!-- <div class="search-nav">
+            <input type="text" placeholder="Search products">
+            <button>Search</button>
+        </div> -->
+        <ul>
+            <li><a routerLink="">Product List</a></li>
+            <li><a routerLink="">Add Products</a></li>
+            <li><a>Logout</a></li>
+            <li><a>Seller Name</a></li>
+         
         </ul>
     </nav>
 
